@@ -1,4 +1,3 @@
-import React from "react";
 import { db } from "../firebase.config";
 import { collection, onSnapshot } from "firebase/firestore";
 import { useState } from "react";

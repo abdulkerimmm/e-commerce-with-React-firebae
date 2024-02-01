@@ -4,8 +4,8 @@ import { Col, Container, Row } from "reactstrap";
 import UseGetData from "../custom-hooks/UseGetData";
 
 const Orders = () => {
-  const { data: products } = UseGetData("products");
-  const { data: users } = UseGetData("users");
+  // const { data: products } = UseGetData("products");
+  // const { data: users } = UseGetData("users");
 
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);

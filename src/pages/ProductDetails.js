@@ -42,7 +42,7 @@ const ProductDetails = () => {
       }
     };
     getProduct();
-  }, []);
+  }, [docRef]);
 
   const {
     productName,
