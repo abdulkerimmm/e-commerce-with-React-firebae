@@ -26,3 +26,7 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// "homepage": "http://abdulkerimmm.githup.io/e-commerce-with-React-firebae",
+// "predeploy": "npm run build",
+//     "deploy": "gh-pages -d build",

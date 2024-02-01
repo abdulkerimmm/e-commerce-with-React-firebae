@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Col, Container, Row } from "reactstrap";
-import UseGetData from "../custom-hooks/UseGetData";
+// import UseGetData from "../custom-hooks/UseGetData";
 
 const Orders = () => {
   // const { data: products } = UseGetData("products");
