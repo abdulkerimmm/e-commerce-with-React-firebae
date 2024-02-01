@@ -42,7 +42,7 @@ const ProductDetails = () => {
       }
     };
     getProduct();
-  }, [getDoc]);
+  }, []); // eslint-disable-next-line react-hooks/exhaustive-deps
 
   const {
     productName,
