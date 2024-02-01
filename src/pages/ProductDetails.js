@@ -34,12 +34,16 @@ const ProductDetails = () => {
   const { data: products } = UseGetData("products"); //to be able to find related product (you also might like this)
 
   const getProduct = async () => {
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      setProduct(docSnap.data());
-      console.log("setproduct");
-    } else {
-      console.log("no prudcts");
+    try {
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        setProduct(docSnap.data());
+        console.log("setproduct");
+      } else {
+        console.log("no prudcts");
+      }
+    } catch (error) {
+      console.error("Error fetching product:", error);
     }
   };
 
