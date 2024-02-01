@@ -32,16 +32,18 @@ const ProductDetails = () => {
   const docRef = doc(db, "products", id);
 
   const { data: products } = UseGetData("products"); //to be able to find related product (you also might like this)
+
+  const getProduct = async () => {
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      setProduct(docSnap.data());
+      console.log("setproduct");
+    } else {
+      console.log("no prudcts");
+    }
+  };
+
   useEffect(() => {
-    const getProduct = async () => {
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        setProduct(docSnap.data());
-        console.log("setproduct");
-      } else {
-        console.log("no prudcts");
-      }
-    };
     getProduct();
   }, [id]);
 
