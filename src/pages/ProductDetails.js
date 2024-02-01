@@ -37,12 +37,13 @@ const ProductDetails = () => {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         setProduct(docSnap.data());
+        console.log("setproduct");
       } else {
         console.log("no prudcts");
       }
     };
     getProduct();
-  }, [docRef]); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]); // eslint-disable-next-line react-hooks/exhaustive-deps
 
   const {
     productName,
@@ -91,7 +92,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [product]);
 
   return (
     <Helmet title={productName}>
