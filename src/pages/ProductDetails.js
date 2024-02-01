@@ -42,7 +42,7 @@ const ProductDetails = () => {
       }
     };
     getProduct();
-  }, []); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [docRef]); // eslint-disable-next-line react-hooks/exhaustive-deps
 
   const {
     productName,
@@ -91,7 +91,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [product]);
+  }, []);
 
   return (
     <Helmet title={productName}>
