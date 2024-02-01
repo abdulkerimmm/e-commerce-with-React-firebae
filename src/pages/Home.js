@@ -131,7 +131,7 @@ const Home = () => {
             </Col>
 
             <Col lg="6" md="12" className="text-end counter__img">
-              <img src={counterImg} alt="image" />
+              <img src={counterImg} alt="counterr eer" />
             </Col>
           </Row>
         </Container>
